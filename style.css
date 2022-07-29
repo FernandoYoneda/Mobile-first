@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-heading: 'Staatliches', cursive;
+    --ff-texting: 'Palanquin', sans-serif;
+
+    --bg-primary:hsl(218, 17%, 60%);
+    ;
+    --bg-secondary:hsl(275, 18%, 79%);
+    --bg-tertiary:hsl(312, 91%, 96%);
+    --bg-quaternary:hsl(233, 100%, 97%);
+    --bg-quinary: hsl(0, 0%, 85%);
+
+    --fc-primary: hsl(0, 0%, 100%);
+    --fc-secondary: hsl(274, 84%, 12%);
+    --fc-tertiary:hsl(232, 17%, 35%);
+
+
+
+
+
+    font-size: 62.5%;
+    --fs-head: 4rem;
+    --fs-body: 2rem;
+}
+
+body {
+    background-color: var(--bg-quinary);
+    text-align: center;
+}
+
+.page {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    font-family: var(--ff-heading);
+    background-color: var(--bg-primary);
+   
+    margin: auto;
+    padding-bottom: 2.9rem;
+}
+
+@media (min-width: 700px) {
+    :root{
+        --fs-head:4.8rem;
+        --fs-body:2.4rem;
+    }
+
+    body{
+        display: grid;
+    }
+
+   .page{ 
+       max-width: 128rem;
+       display: grid;
+   }
+
+}
+
+header h1{
+    font-size: var(--fs-head);
+    letter-spacing: 0.05em;
+    font-family: var(--ff-heading);
+    font-weight: 400;
+    line-height: 3.4rem;
+    color: var(--fc-primary);
+    background-color: var(--bg-secondary);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    height: 4.9rem;
+    flex-direction: column;
+}
+
+header img{
+    width: 13.7rem;
+    height: 13.7rem;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+}
+
+main {
+    background-color: var(--bg-quaternary);
+    max-width: 32rem;
+    margin: auto;
+    display: grid;
+}
+
+main p{
+    color: var(--fc-secondary);
+    font-size: var(--fs-body);
+    font-family: var(--ff-texting);
+    font-weight: 400;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 6.3rem;
+    padding: 1.4rem 4.3rem 0 3.6rem;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.iceCream {
+    margin: 0 3.2rem 3.2rem 3.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.iceCream h2{
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+}
+
+.iceCream h2 span {
+    border-radius: 2rem;
+    background-color: var(--bg-tertiary);
+    color: var(--fc-tertiary);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    padding: 0 2.3rem;
+    height: 1rem;
+    font-family: var(--ff-heading);
+}    
+
+.iceCream img {
+    animation-name: downtop;
+    animation-duration: 1s;
+}
+
+.iceCream h2 {
+    animation-name: topdown;
+    animation-duration: 1s;
+}
+
+
+
+
+@keyframes downtop {
+    100%{
+        opacity: 1;
+        transform: translateY(-15px);
+    }
+
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topdown {
+    100%{
+        opacity: 1;
+        transform: translateY(20px);
+    }
+
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
